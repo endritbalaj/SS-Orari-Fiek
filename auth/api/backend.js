@@ -16,6 +16,7 @@ export const sendData = (fullName, email) => {
     role,
     email,
   }
+  
   const url = `${process.env.REACT_APP_WEBAPI}/User/Add`
 
   axios.post(url, userObj, headers).then((res) => {
