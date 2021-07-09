@@ -1,8 +1,9 @@
 import { sendData } from '../api/backend'
+require('dotenv').config()
 import firebase from 'firebase'
 import 'firebase/auth'
 import 'firebase/firestore'
-require('dotenv').config()
+
 
 const config = {
   apiKey: process.env.REACT_APP_apiKey,
