@@ -2,7 +2,7 @@ import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
 
 export const sendData = (fullName, email) => {
-  const headers = {
+  const head = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
   }
@@ -18,7 +18,7 @@ export const sendData = (fullName, email) => {
   }
   const url = `${process.env.REACT_APP_WEBAPI}/User/Add`
 
-  axios.post(url, userObj, headers).then((res) => {
+  axios.post(url, userObj, head).then((res) => {
     console.log(res)
     localStorage.setItem('id', res.data)
   })
